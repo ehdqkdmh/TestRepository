@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="파일">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="새로만들기">
+                           <accelerator>
+                              <KeyCodeCombination alt="DOWN" code="N" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                           <graphic>
+                               <ImageView>
+                                   <image>
+                                    <Image url="@icon/new.png" />
+                                 </image>
+                               </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <Menu mnemonicParsing="false" text="프로젝트 생성">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="자바 애플리케이션" />
+                              <MenuItem mnemonicParsing="false" text="JavaFX 애플리케이션" />
+                          </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" text="열기">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                           <graphic>
+                               <ImageView>
+                                   <image>
+                                    <Image url="@icon/open.png" />
+                                 </image>
+                               </ImageView>
+                           </graphic>                     
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="저장">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                           <graphic>
+                               <ImageView>
+                                   <image>
+                                    <Image url="@icon/save.png" />
+                                 </image>
+                               </ImageView>
+                           </graphic>                         
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="끝내기" />
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="편집" />
+              </menus>
+            </MenuBar>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                  <Button mnemonicParsing="false">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                 <Image url="@icon/new.png" />
+                              </image>
+                            </ImageView>
+                        </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                 <Image url="@icon/open.png" />
+                              </image>
+                            </ImageView>
+                        </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false">
+                        <graphic>
+                            <ImageView>
+                                <image>
+                                 <Image url="@icon/save.png" />
+                              </image>
+                            </ImageView>
+                        </graphic>
+                  </Button>
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
