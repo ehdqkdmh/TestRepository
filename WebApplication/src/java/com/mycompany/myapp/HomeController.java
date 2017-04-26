@@ -49,5 +49,15 @@ public class HomeController {
 	@RequestMapping("/javascript/exam04")
 	public String javascriptExam04() {
 		return "javascript/exam04";
-	}		
+	}	
+
+	@RequestMapping("/bootstrap/exam01")
+	public String bootstrapExam01() {
+		return "bootstrap/exam01";
+	}	
+	
+	@RequestMapping("/bootstrap/exam02")
+	public String bootstrapExam02() {
+		return "bootstrap/exam02";
+	}	
 }
