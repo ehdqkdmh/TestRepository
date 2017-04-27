@@ -65,6 +65,26 @@ public class HomeController {
 	public String javascriptExam07() {
 		return "javascript/exam07";
 	}		
+	
+	@RequestMapping("/javascript/exam08")
+	public String javascriptExam08() {
+		return "javascript/exam08";
+	}	
+
+	@RequestMapping("/javascript/exam09")
+	public String javascriptExam09() {
+		return "javascript/exam09";
+	}	
+	
+	@RequestMapping("/javascript/exam10")
+	public String javascriptExam10() {
+		return "javascript/exam10";
+	}	
+	
+	@RequestMapping("/javascript/exam11")
+	public String javascriptExam11() {
+		return "javascript/exam11";
+	}
 
 	@RequestMapping("/bootstrap/exam01")
 	public String bootstrapExam01() {
