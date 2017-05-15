@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="260.0" style="-fx-background-color: black; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="imgOpenMsg" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets left="20.0" />
+         </HBox.margin>
+         <image>
+            <Image url="@images/icons/suyang/information.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblOpenMsg" text="문이 열렸습니다" textFill="WHITE">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+         <font>
+            <Font name="Malgun Gothic" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</HBox>

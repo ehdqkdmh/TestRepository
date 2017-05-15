@@ -1,0 +1,12 @@
+.progress-indicator .percentage {
+    -fx-fill: #ffffff;
+    -fx-font-size: 15px;
+}
+
+#SoundProgress {
+    -fx-progress-color: red;
+}
+
+#LightProgress {
+    -fx-progress-color: #FFE358;
+}

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="videoControl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" styleClass="background" stylesheets="@theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smarthomepanel.video.VideoController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" StackPane.alignment="TOP_LEFT">
+         <children>
+            <AnchorPane fx:id="anchorpaneScreen" layoutX="152.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: white; -fx-border-width: 5; -fx-border-radius: 5;" AnchorPane.bottomAnchor="125.0">
+               <children>
+                  <ImageView fx:id="imgScreen" fitHeight="240.0" fitWidth="480.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                     <image>
+                        <Image url="@images/icons/suyang/buildingfront.JPG" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect></AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="800.0">
+               <children>
+                  <Label fx:id="lblTime" layoutX="20.0" layoutY="25.0" text="시간정보" textFill="WHITE">
+                    <font>
+                         <Font size="20.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                  </Label>
+                  <ImageView fitHeight="58.0" fitWidth="63.0" layoutX="333.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/suyang/eye.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+                  <Label layoutX="397.0" layoutY="18.0" text="보기" textFill="WHITE">
+                     <font>
+                        <Font name="Malgun Gothic" size="30.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  
+                   <Separator layoutX="10.0" layoutY="70.0" prefHeight="0.0" prefWidth="780.0">
+                     <effect>
+                        <DropShadow />
+                     </effect></Separator>
+               
+               </children>
+              
+
+            </AnchorPane>
+            <Button fx:id="btn_Back" layoutX="29.0" layoutY="229.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/suyang/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Slider fx:id="slider" layoutX="702.0" layoutY="108.0" orientation="VERTICAL" prefHeight="218.0" prefWidth="21.0" showTickMarks="true">
+               <effect>
+                  <DropShadow />
+               </effect></Slider>
+            <Button fx:id="btn_speaker" layoutX="684.0" layoutY="329.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBtnSpeaker" prefHeight="35.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imgSpeaker" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/icons/suyang/speaker.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btn_BFront" alignment="CENTER" contentDisplay="TOP" layoutX="136.0" layoutY="360.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBtnBFront" prefHeight="118.0" prefWidth="100.0" style="-fx-background-color: transparent;" stylesheets="@theme.css" text="동 앞" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgBFront" fitHeight="65.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/suyang/apartment.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btn_DFront" alignment="CENTER" contentDisplay="TOP" layoutX="244.0" layoutY="361.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBtnDFront" prefHeight="106.0" prefWidth="100.0" style="-fx-background-color: transparent;" stylesheets="@theme.css" text="현관 앞" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgDFront" fitHeight="65.0" fitWidth="60.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/icons/suyang/entrance.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btn_PFront" alignment="CENTER" contentDisplay="TOP" layoutX="358.0" layoutY="360.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBtnPark" prefHeight="106.0" prefWidth="95.0" style="-fx-background-color: transparent;" stylesheets="@theme.css" text="주차장" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imgPFront" fitHeight="65.0" fitWidth="70.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/icons/suyang/parking.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Label fx:id="lblCallState" alignment="CENTER" contentDisplay="CENTER" layoutX="517.0" layoutY="436.0" prefHeight="29.0" prefWidth="50.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgDoor2" fitHeight="70.0" fitWidth="60.0" layoutX="590.0" layoutY="376.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/suyang/open-exit-door.png" />
+               </image></ImageView>
+            <Button fx:id="btn_Call" layoutX="502.0" layoutY="366.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imgCall" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@images/icons/suyang/phone-call.png" />
+                     </image>	
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="btn_Door" alignment="CENTER" layoutX="579.0" layoutY="367.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBtnOpen" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: transparent;" textFill="WHITE">
+               <graphic>
+                  <ImageView fx:id="imgDoor" fitHeight="70.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons/suyang/closeddoor4.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

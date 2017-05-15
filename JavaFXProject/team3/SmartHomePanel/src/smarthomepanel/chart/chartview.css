@@ -1,0 +1,31 @@
+.bg {
+    -fx-background-image: url("images/background8.jpg");
+    -fx-background-size: 800px 480px;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-title {
+    -fx-text-fill: white;
+}
+
+.chart-legend {
+   -fx-background-color: transparent;
+}
+.chart-legend-item{
+    -fx-text-fill: white;
+}
+
+.chart-vertical-line{
+    -fx-stroke: transparent;
+}
+
+.default-color0.chart-bar {
+    -fx-bar-fill: skyblue;
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: blue;
+}

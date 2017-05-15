@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="notifyControl" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smarthomepanel.notify.NotifyController">
+    <children>
+        <ImageView fitHeight="480.0" fitWidth="800.0" pickOnBounds="true">
+            <image>
+                <Image url="@image/background8.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="364.0" layoutY="36.0" />
+        <Button fx:id="btnBack" layoutX="725.0" layoutY="15.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="36.0" style="-fx-background-color: transparent;">
+         <graphic>
+                <ImageView fitHeight="39.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/back(white).png" />
+                    </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </ImageView>
+         </graphic></Button>
+        <TableView fx:id="tableView" layoutX="63.0" layoutY="86.0" prefHeight="366.0" prefWidth="687.0" style="-fx-background-color: transparent; -fx-text-fill: white;">
+            <columns>
+                <TableColumn prefWidth="149.0" text="날짜" />
+                <TableColumn prefWidth="171.0" text="공시처" />
+                <TableColumn prefWidth="366.0" text="제목" />
+            </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+        </TableView>
+        <Separator layoutX="10.0" layoutY="70.0" prefHeight="0.0" prefWidth="780.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <effect>
+            <DropShadow />
+         </effect></Separator>
+        <ImageView fitWidth="45.0" layoutX="320.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/notepad.png" />
+            </image>
+         <effect>
+            <DropShadow />
+         </effect>
+        </ImageView>
+        <Label fx:id="lblTime" layoutX="20.0" layoutY="25.0" text="00:00:00" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="365.0" layoutY="16.0" prefHeight="44.0" prefWidth="135.0" text="공지사항" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+    </children>
+</AnchorPane>

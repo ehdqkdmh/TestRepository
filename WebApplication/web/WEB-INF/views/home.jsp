@@ -74,6 +74,12 @@
 		<h4>요청 HTTP 정보 얻기</h4>
 		<a href="http/exam02?type=freeboard&bno=5&hobby=baseball&hobby=soccer"  class="btn btn-primary">exam02</a>
 		<a href="http/exam03?type=freeboard&bno=5&hobby=baseball&hobby=soccer"  class="btn btn-primary">exam03</a>
+
+		<h4>폼 제출</h4>
+		<a href="form/exam01"  class="btn btn-primary">회원 가입 양식 요청</a>
+		
+		<h4>파일 업로드</h4>
+		<a href="form/exam02"  class="btn btn-primary">회원 가입 양식 요청</a>
 	</body>
 </html>
 

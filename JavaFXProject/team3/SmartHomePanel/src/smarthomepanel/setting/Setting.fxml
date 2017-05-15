@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="settingControl" prefHeight="480.0" prefWidth="800.0" stylesheets="@setting.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smarthomepanel.setting.SettingController">
+    <children>
+        <ImageView fitHeight="480.0" fitWidth="800.0" pickOnBounds="true">
+            <image>
+                <Image url="@image/background8.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="387.0" layoutY="17.0" style="-fx-background-color: transparent;" text="설정" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="30.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnBack" layoutX="727.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/back(white).png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <ImageView fitWidth="40.0" layoutX="342.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/settings.png" />
+            </image>
+        </ImageView>
+        <Separator layoutX="10.0" layoutY="70.0" prefHeight="0.0" prefWidth="780.0" />
+        <Label fx:id="lblTime" layoutX="20.0" layoutY="25.0" text="00:00:00" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="20.0" />
+            </font>
+        </Label>
+      <Group layoutY="190.0">
+         <children>
+            <Label layoutX="243.0" layoutY="133.0" prefHeight="23.0" prefWidth="56.0" text="벨소리" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="243.0" layoutY="192.0" prefHeight="23.0" prefWidth="69.0" text="음량조절" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="198.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/volume.png" />
+               </image>
+            </ImageView>
+            <ProgressIndicator fx:id="SoundProgress" id="SoundProgress" layoutX="686.0" layoutY="171.0" prefHeight="65.0" prefWidth="70.0" progress="0.0" />
+            <Label layoutX="76.0" layoutY="201.0" text="소리설정" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="SelectBell" layoutX="312.0" layoutY="132.0" prefHeight="25.0" prefWidth="374.0" promptText="선택하세요" />
+            <Slider fx:id="SoundSlider" layoutX="312.0" layoutY="191.0" prefHeight="25.0" prefWidth="374.0" />
+                <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="80.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/sound.png" />
+                    </image>
+                </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="198.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/music.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group layoutY="-190.0">
+         <children>
+            <Slider fx:id="LightSlider" layoutX="312.0" layoutY="353.0" prefHeight="20.0" prefWidth="374.0" />
+            <Label layoutX="78.0" layoutY="389.0" text="화면설정" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="15.0" />
+               </font>
+            </Label>
+            <ProgressIndicator fx:id="LightProgress" id="LightProgress" layoutX="686.0" layoutY="331.0" prefHeight="65.0" prefWidth="70.0" progress="0.0" />
+                <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="80.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/screen.png" />
+                    </image>
+                </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="198.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/brightness.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="243.0" layoutY="352.0" prefHeight="23.0" prefWidth="69.0" text="밝기조절" textFill="WHITE">
+               <font>
+                  <Font name="Malgun Gothic Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Separator layoutX="10.0" layoutY="265.0" prefHeight="5.0" prefWidth="780.0" style="-fx-color: black;">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Separator>
+    </children>
+</AnchorPane>

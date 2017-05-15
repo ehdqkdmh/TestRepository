@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane stylesheets="@Font.css" id="AnchorPane" prefHeight="380.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smarthomepanel.control.TemperatureController">
+   <children>
+      <ImageView fitHeight="380.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/backgrounds/background8.jpg" />
+         </image>
+      </ImageView>
+      <Separator layoutX="19.0" layoutY="68.0" prefHeight="0.0" prefWidth="562.0">
+         <effect>
+            <DropShadow />
+         </effect></Separator>
+      <Label fx:id="lbTitle" layoutX="53.0" layoutY="14.0" text="거실" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="63.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icons/control/thermometer_on.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label layoutX="287.0" layoutY="111.0" text="현재온도" textFill="WHITE">
+          <font>
+              <Font name="Malgun Gothic" size="20.0" />
+          </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label fx:id="lbTempNow" layoutX="417.0" layoutY="106.0" text="20" textFill="WHITE">
+          <font>
+              <Font name="Malgun Gothic" size="30.0" />
+          </font>
+      </Label>
+      <Label layoutX="465.0" layoutY="110.0" text="도" textFill="WHITE">
+          <font>
+              <Font name="Malgun Gothic" size="20.0" />
+          </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="287.0" layoutY="188.0" text="설정온도" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Button fx:id="btnUp" layoutX="495.0" layoutY="166.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/btnUp.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnDown" layoutX="495.0" layoutY="209.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/btnDown.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="lbTempSetting" layoutX="416.0" layoutY="180.0" text="20" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="465.0" layoutY="188.0" text="도" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Separator layoutX="24.0" layoutY="291.0" prefHeight="0.0" prefWidth="562.0">
+         <effect>
+            <DropShadow />
+         </effect></Separator>
+      <Button fx:id="btnConfirm" layoutX="197.0" layoutY="306.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/confirm.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnCancel" layoutX="367.0" layoutY="306.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/cancel.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

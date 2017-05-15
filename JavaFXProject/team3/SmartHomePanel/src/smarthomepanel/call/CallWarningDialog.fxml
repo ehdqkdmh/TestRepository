@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="callDialog" prefHeight="240.0" prefWidth="400.0" style="-fx-border-color: #BDBDBD; -fx-border-width: 5;" stylesheets="@CallDialog.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="56.0" layoutY="93.0" text="동(호) 수를 입력하세요" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="28.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <Button fx:id="dialogBtnClose" layoutX="165.0" layoutY="158.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+              <ImageView fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@images/error.png" />
+                  </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+              </ImageView>
+         </graphic></Button>
+      <ImageView id="imageWarning" fitHeight="49.0" fitWidth="54.0" layoutX="176.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow />
+         </effect>
+         <image>
+            <Image url="@images/attention.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

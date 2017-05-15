@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="chart" opacity="1.0" prefHeight="480.0" prefWidth="800.0" styleClass="bg" stylesheets="@chartview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smarthomepanel.chart.ChartController">
+    <children>
+        <Label layoutX="21.0" layoutY="355.0" prefHeight="18.0" prefWidth="130.0" text="금월 예상금액(원)" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic Semilight" size="16.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <Label fx:id="lblTitle" alignment="CENTER" layoutX="268.0" layoutY="18.0" text="00월 에너지 사용량" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="30.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <Button id="btnHome" fx:id="btnHome" alignment="CENTER" contentDisplay="TOP" ellipsisString="" layoutX="730.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: transparent;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <font>
+                <Font name="Segoe UI Black" size="12.0" />
+            </font>
+         <graphic>
+                <ImageView fx:id="btnHomeImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/back(white).png" />
+                    </image>
+                </ImageView>
+         </graphic>
+        </Button>
+        <Label fx:id="lblElecCharge" alignment="CENTER" layoutX="188.0" layoutY="328.0" prefHeight="21.0" text="000000" textFill="#9ac1e5">
+            <font>
+                <Font name="Dotum" size="20.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <Label layoutX="21.0" layoutY="326.0" text="현재 사용금액(원)" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic Semilight" size="16.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <Label fx:id="lblElecChargep" alignment="CENTER" layoutX="188.0" layoutY="357.0" prefHeight="21.0" text="000000" textFill="#9ac1e5">
+            <font>
+                <Font name="Dotum" size="20.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <Label fx:id="lblWaterChargep" alignment="CENTER" layoutX="389.0" layoutY="357.0" prefHeight="21.0" text="000000" textFill="#9ac1e5">
+            <font>
+                <Font name="Dotum" size="20.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <Label fx:id="lblWaterCharge" alignment="CENTER" layoutX="389.0" layoutY="328.0" prefHeight="21.0" text="000000" textFill="#9ac1e5">
+            <font>
+                <Font name="Dotum" size="20.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <Label fx:id="lblGasCharge" alignment="CENTER" layoutX="595.0" layoutY="328.0" prefHeight="21.0" text="000000" textFill="#9ac1e5">
+            <font>
+                <Font name="Dotum" size="20.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <Label fx:id="lblGasChargep" alignment="CENTER" layoutX="595.0" layoutY="357.0" prefHeight="21.0" text="000000" textFill="#9ac1e5">
+            <font>
+                <Font name="Dotum" size="20.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+      <Separator layoutX="10.0" layoutY="70.0" prefHeight="0.0" prefWidth="780.0" />
+      <Label fx:id="lblTime" layoutX="20.0" layoutY="25.0" text="시간정보" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNotice1" alignment="CENTER" layoutX="177.0" layoutY="397.0" prefHeight="18.0" text="평균 이상" textFill="RED">
+         <font>
+            <Font name="Malgun Gothic" size="20.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="lblNotice2" alignment="CENTER" layoutX="378.0" layoutY="397.0" prefHeight="18.0" text="평균 이상" textFill="RED">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="Malgun Gothic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNotice3" alignment="CENTER" layoutX="584.0" layoutY="397.0" prefHeight="18.0" text="평균 이상" textFill="RED">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="Malgun Gothic" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="140.0" fitWidth="166.0" layoutX="29.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/legend.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect></ImageView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="callDialog" prefHeight="240.0" prefWidth="400.0" style="-fx-border-color: #BDBDBD; -fx-border-width: 5;" stylesheets="@CallDialog.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="295.0" layoutY="98.0" text="호" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="25.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <Label id="lblHo" alignment="CENTER_RIGHT" layoutX="223.0" layoutY="94.0" prefWidth="70.0" text="0000" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="30.0" />
+            </font>
+        </Label>
+        <Label id="lblDong" alignment="CENTER_RIGHT" layoutX="65.0" layoutY="94.0" prefWidth="70.0" text="0000" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="30.0" />
+            </font>
+        </Label>
+        <Label layoutX="137.0" layoutY="98.0" text="동" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="25.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <Label id="lblCalling" layoutX="164.0" layoutY="20.0" prefHeight="39.0" prefWidth="106.0" text="호출 중" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="25.0" />
+            </font>
+         <effect>
+            <DropShadow />
+         </effect>
+        </Label>
+        <Button fx:id="dialogBtnClose" layoutX="172.0" layoutY="170.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+                <ImageView fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/error.png" />
+                    </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </ImageView>
+         </graphic></Button>
+      <ImageView fitHeight="44.0" fitWidth="30.0" layoutX="129.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/telephone.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Separator layoutX="15.0" layoutY="67.0" prefHeight="3.0" prefWidth="368.0">
+         <effect>
+            <DropShadow />
+         </effect></Separator>
+    </children>
+</AnchorPane>

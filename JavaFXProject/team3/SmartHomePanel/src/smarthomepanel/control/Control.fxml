@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane stylesheets="@Font.css" id="AnchorPane" fx:id="mainControl" prefHeight="480.0" prefWidth="800.0" style="-fx-background-color: darkgray;"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smarthomepanel.control.ControlController">
+   <children>
+      <ImageView fitHeight="480.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/backgrounds/background8.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnHeating" alignment="CENTER" layoutX="186.0" layoutY="176.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" style="-fx-background-color: transparent;" textAlignment="RIGHT">
+         <font>
+            <Font name="Gisha" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/icons/control/heating.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnLight" alignment="CENTER" layoutX="482.0" layoutY="176.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="130.0" style="-fx-background-color: transparent;" textAlignment="RIGHT">
+         <font>
+            <Font name="Gisha" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/icons/control/light.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="221.0" layoutY="336.0" text="난방설정" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="517.0" layoutY="336.0" text="조명설정" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Separator layoutX="10.0" layoutY="70.0" prefHeight="0.0" prefWidth="780.0">
+         <effect>
+            <DropShadow />
+         </effect></Separator>
+      <Label layoutX="332.0" layoutY="13.0" text="난방 / 조명 설정" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic Bold" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Button fx:id="btnHome" layoutX="730.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/icons/control/home_shadow.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnBack" layoutX="36.0" layoutY="222.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/icons/control/back(white).png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </graphic></Button>
+      <Label fx:id="lblTime" layoutX="20.0" layoutY="25.0" text="시간 정보" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="261.0" layoutY="11.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/icons/control/ammeter.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

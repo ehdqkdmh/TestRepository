@@ -1,0 +1,10 @@
+#callDialog {
+    -fx-background-image: url("background.jpg");
+    -fx-background-size: 400px 240px;
+}
+
+#dialogBtnClose:hover {
+    -fx-scale-x : 1.2;
+    -fx-scale-y : 1.2;
+
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="callDialog" prefHeight="240.0" prefWidth="400.0" style="-fx-border-color: #BDBDBD; -fx-border-width: 5;" stylesheets="@CallDialog.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="80.0" layoutY="119.0" prefHeight="39.0" text="에서 호출이 왔습니다" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Malgun Gothic" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="18.0" layoutY="65.0" prefHeight="3.0" prefWidth="368.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Separator>
+      <Label layoutX="153.0" layoutY="79.0" text="동" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Malgun Gothic" size="25.0" />
+         </font>
+      </Label>
+      <Label id="lblDong" alignment="CENTER_RIGHT" layoutX="81.0" layoutY="75.0" prefWidth="70.0" text="0000" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="30.0" />
+         </font>
+      </Label>
+      <Label id="lblHo" alignment="CENTER_RIGHT" layoutX="225.0" layoutY="75.0" prefWidth="70.0" text="0000" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="297.0" layoutY="79.0" text="호" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Malgun Gothic" size="25.0" />
+         </font>
+      </Label>
+      <Label id="lblCalling" alignment="CENTER" contentDisplay="CENTER" layoutX="164.0" layoutY="20.0" prefHeight="39.0" prefWidth="76.0" text="호출" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Malgun Gothic" size="25.0" />
+         </font>
+      </Label>
+      <Button id="dialogBtnReceive" fx:id="dialogBtnReceive" layoutX="122.0" layoutY="166.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView id="imageReceive" fx:id="imageReceive" fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <image>
+                  <Image url="@images/call(receive).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="dialogBtnClose" fx:id="dialogBtnClose" layoutX="225.0" layoutY="166.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView id="imageClose" fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <image>
+                  <Image url="@images/call(refuse).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="dialogBtnClose2" fx:id="dialogBtnReceive1" layoutX="171.0" layoutY="106.0" mnemonicParsing="false" opacity="0.0" prefHeight="51.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView id="imageReceive" fx:id="imageReceive1" fitHeight="42.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <image>
+                  <Image url="@images/call(close).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>

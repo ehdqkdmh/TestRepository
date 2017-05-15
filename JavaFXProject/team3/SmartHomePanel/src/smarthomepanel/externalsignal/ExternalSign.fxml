@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smarthomepanel.externalsignal.ExternalSignController">
+    <children>
+        <ImageView fitHeight="500.0" fitWidth="600.0" pickOnBounds="true">
+            <image>
+                <Image url="@../images/backgrounds/background8.jpg" />
+            </image>
+        </ImageView>
+        <Button layoutX="118.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleBtnCall" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 30; -fx-border-width: 2;" text="호출" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="18.0" />
+            </font>
+        </Button>
+        <Label layoutX="119.0" layoutY="96.0" text="동" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="20.0" />
+            </font>
+            <effect>
+                <DropShadow />
+            </effect>
+        </Label>
+        <Label layoutX="228.0" layoutY="96.0" text="호" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="20.0" />
+            </font>
+            <effect>
+                <DropShadow />
+            </effect>
+        </Label>
+        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="82.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+            <effect>
+                <DropShadow />
+            </effect>
+            <image>
+                <Image url="@../call/images/telephone.png" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" layoutX="116.0" layoutY="14.0" text="세대 호출" textFill="WHITE">
+            <effect>
+                <DropShadow />
+            </effect>
+            <font>
+                <Font name="Malgun Gothic" size="20.0" />
+            </font>
+        </Label>
+        <Separator layoutX="15.0" layoutY="50.0" prefWidth="270.0" />
+        <TextField fx:id="txtDong" alignment="CENTER_RIGHT" layoutX="31.0" layoutY="89.0" prefHeight="43.0" prefWidth="82.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="0000">
+            <font>
+                <Font name="Malgun Gothic" size="20.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtHo" alignment="CENTER_RIGHT" layoutX="155.0" layoutY="89.0" prefHeight="43.0" prefWidth="73.0" style="-fx-background-color: transparent; -fx-text-fill: white;" text="0000">
+            <font>
+                <Font name="Malgun Gothic" size="20.0" />
+            </font>
+        </TextField>
+        <Separator layoutX="316.0" layoutY="50.0" prefWidth="270.0" />
+        <Label alignment="CENTER" layoutX="371.0" layoutY="13.0" text="외부 호출 / 택배" textFill="WHITE">
+            <effect>
+                <DropShadow />
+            </effect>
+            <font>
+                <Font name="Malgun Gothic" size="20.0" />
+            </font>
+        </Label>
+        <Button layoutX="327.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleBtnCallExternalBuilding" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 30; -fx-border-width: 2;" text="동앞" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="18.0" />
+            </font>
+        </Button>
+        <Button layoutX="409.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleBtnCallExternalDoor" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 30; -fx-border-width: 2;" text="현관" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="18.0" />
+            </font>
+        </Button>
+        <Button layoutX="414.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleBtnArriveBox" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 30; -fx-border-width: 2;" text="택배" textFill="WHITE">
+            <font>
+                <Font name="Malgun Gothic" size="18.0" />
+            </font>
+        </Button>
+      <Button layoutX="491.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleBtnCallExternalParkingLot" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 30; -fx-border-width: 2;" text="주차장" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="18.0" />
+         </font>
+      </Button>
+      <Separator layoutX="297.0" layoutY="14.0" orientation="VERTICAL" prefHeight="234.0" prefWidth="9.0" style="-fx-color: white;" />
+      <Separator layoutY="250.0" prefWidth="600.0" />
+      <Separator layoutX="10.0" layoutY="300.0" prefWidth="580.0" />
+      <Label alignment="CENTER" layoutX="227.0" layoutY="263.0" text="공지사항 등록" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Malgun Gothic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDate" layoutX="78.0" layoutY="332.0" />
+      <TextField fx:id="txtNoticePlace" layoutX="78.0" layoutY="387.0" />
+      <TextField fx:id="txtTitle" layoutX="78.0" layoutY="440.0" />
+      <TextArea fx:id="txtContents" layoutX="290.0" layoutY="320.0" prefHeight="161.0" prefWidth="278.0" wrapText="true" />
+      <Label layoutX="34.0" layoutY="332.0" text="날짜" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="389.0" text="공시처" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="442.0" text="제목" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="245.0" layoutY="391.0" text="내용" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="504.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleBtnNotice" prefHeight="29.0" prefWidth="64.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 30; -fx-border-width: 2;" text="공지" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="15.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

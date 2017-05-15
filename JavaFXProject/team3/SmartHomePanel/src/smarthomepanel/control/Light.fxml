@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="lightControl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="800.0" stylesheets="@Font.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smarthomepanel.control.LightController">
+   <children>
+      <ImageView fitHeight="480.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/backgrounds/background8.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="376.0" fitWidth="719.0" layoutX="45.0" layoutY="90.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/icons/control/test.png" />
+         </image>
+      </ImageView>
+      <Region fx:id="regionMain" layoutX="341.0" layoutY="300.0" opacity="0.7" prefHeight="160.0" prefWidth="214.0" style="-fx-background-color: black;" />
+      <Region fx:id="regionKitchen" layoutX="354.0" layoutY="96.0" opacity="0.7" prefHeight="162.0" prefWidth="214.0" style="-fx-background-color: black;" />
+      <Region fx:id="regionBig" layoutX="575.0" layoutY="169.0" opacity="0.7" prefHeight="232.0" prefWidth="170.0" style="-fx-background-color: black;" />
+      <Region fx:id="regionRoom2" layoutX="213.0" layoutY="300.0" opacity="0.7" prefHeight="145.0" prefWidth="128.0" style="-fx-background-color: black;" />
+      <Region fx:id="regionRoom1" layoutX="64.0" layoutY="300.0" opacity="0.7" prefHeight="145.0" prefWidth="153.0" style="-fx-background-color: black;" />
+      <Button fx:id="btnMain" layoutX="348.0" layoutY="302.0" mnemonicParsing="false" prefHeight="159.0" prefWidth="204.0" style="-fx-background-color: transparent;" styleClass="buttonLight" text="거실" textFill="WHITE">
+          <font>
+            <Font name="Malgun Gothic" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="imgMain" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/light_off2.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button id="buttonLight" fx:id="btnBig" layoutX="572.0" layoutY="169.0" mnemonicParsing="false" prefHeight="226.0" prefWidth="170.0" style="-fx-background-color: transparent;" styleClass="buttonLight" text="안방" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="15.0" />
+         </font>
+          <graphic>
+            <ImageView fx:id="imgBig" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/light_off2.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnKitchen" layoutX="367.0" layoutY="100.0" mnemonicParsing="false" prefHeight="159.0" prefWidth="197.0" style="-fx-background-color: transparent;" styleClass="buttonLight" text="주방" textFill="WHITE">
+          <font>
+            <Font name="Malgun Gothic" size="15.0" />
+         </font>
+          <graphic>
+            <ImageView fx:id="imgKitchen" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/light_off2.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnRoom1" layoutX="66.0" layoutY="300.0" mnemonicParsing="false" prefHeight="142.0" prefWidth="147.0" style="-fx-background-color: transparent;" styleClass="buttonLight" text="침실1" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="15.0" />
+         </font>
+          <graphic>
+            <ImageView fx:id="imgRoom1" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/light_off2.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnRoom2" layoutX="219.0" layoutY="300.0" mnemonicParsing="false" prefHeight="142.0" prefWidth="118.0" style="-fx-background-color: transparent;" styleClass="buttonLight" text="침실2" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="15.0" />
+         </font>
+          <graphic>
+            <ImageView fx:id="imgRoom2" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/light_off2.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnHome" layoutX="706.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/home_shadow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Separator layoutX="10.0" layoutY="65.0" prefHeight="6.0" prefWidth="780.0" style="-fx-border-color: yellow;" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="64.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/icons/control/light.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="141.0" layoutY="19.0" prefHeight="44.0" prefWidth="141.0" text="조명 설정" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBack" layoutX="629.0" layoutY="15.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/back(white).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnAllOn" layoutX="23.0" layoutY="114.0" mnemonicParsing="false" style="-fx-background-color: transparent;" styleClass="buttonLight" text="전체켜기" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="15.0" />
+         </font>
+          <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/light_on.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnAllOff" layoutX="141.0" layoutY="114.0" mnemonicParsing="false" style="-fx-background-color: transparent;" styleClass="buttonLight" text="전체끄기" textFill="WHITE">
+         <font>
+            <Font name="Malgun Gothic" size="15.0" />
+         </font>
+          <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons/control/light_off2.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Region fx:id="regionBig2" layoutX="559.0" layoutY="261.0" opacity="0.7" prefHeight="136.0" prefWidth="16.0" style="-fx-background-color: black;" />
+      <Region fx:id="regionMain2" layoutX="158.0" layoutY="258.0" opacity="0.7" prefHeight="42.0" prefWidth="401.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>
