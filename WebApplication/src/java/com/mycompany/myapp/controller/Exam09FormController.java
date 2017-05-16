@@ -3,6 +3,7 @@ package com.mycompany.myapp.controller;
 import java.io.File;
 import java.util.Arrays;
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -62,4 +63,20 @@ public class Exam09FormController {
 		
 		return "form/exam02";
 	}	
+	
+	@RequestMapping("/file/download")
+	public void download(HttpServletResponse response) {
+		//응답 HTTP 헤더행을 추가
+		//1) 파일의 이름(옵션)
+		String fileName = "Desert.jpg";
+		response.addHeader("Content-Disposition", "attachment; filename=\"" + fileName + "\"");
+		//2) 파일의 종류(필수)
+		response.addHeader("Content-Type", "image/jpeg");
+		//3) 파일의 크기(옵션)
+		File file = new File(servletContext.getRealPath("/WEB-INF/upload/Desert.jpg"));
+		long fileSize = file.length();
+		response.addHeader("Content-Length", String.valueOf(fileSize));
+		
+		//응답 HTTP 본문에 파일 데이터를 출력
+	}
 }
