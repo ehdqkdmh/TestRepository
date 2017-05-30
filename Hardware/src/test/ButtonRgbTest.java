@@ -5,7 +5,7 @@ import com.pi4j.io.gpio.RaspiPin;
 import com.pi4j.io.gpio.event.GpioPinDigitalStateChangeEvent;
 import com.pi4j.io.gpio.event.GpioPinListenerDigital;
 import hardware.button.Button;
-import hardware.led.RgbLed;
+import hardware.led.RgbLedDigital;
 import java.io.IOException;
 
 public class ButtonRgbTest {
@@ -14,7 +14,7 @@ public class ButtonRgbTest {
 		Button button2 = new Button(RaspiPin.GPIO_02);
 		Button button3 = new Button(RaspiPin.GPIO_03);
 		
-		RgbLed rgbLed = new RgbLed(RaspiPin.GPIO_27, RaspiPin.GPIO_28, RaspiPin.GPIO_29);
+		RgbLedDigital rgbLed = new RgbLedDigital(RaspiPin.GPIO_27, RaspiPin.GPIO_28, RaspiPin.GPIO_29);
 		
 		button1.setGpioPinListenerDigital(new GpioPinListenerDigital() {
 			@Override
