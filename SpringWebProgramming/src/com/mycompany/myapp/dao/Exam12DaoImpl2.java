@@ -131,97 +131,26 @@ public class Exam12DaoImpl2 implements Exam12Dao {
 	
 	@Override
 	public Exam12Board boardSelectByBno(int bno) {
-		Exam12Board board = null;
-		Connection conn = null;
-		try {
-			//JDBC Driver 클래스 로딩
-			Class.forName("oracle.jdbc.OracleDriver");
-			//연결 문자열 작성
-			String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-			//연결 객체 얻기
-			conn = DriverManager.getConnection(url, "iotuser", "iot12345");
-			LOGGER.info("연결 성공");
-			//매개 변수화된 SQL 작성
-			String sql = "select * from board where bno=?";
-			//SQL 문을 전송해서 실행
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, bno);
-			ResultSet rs = pstmt.executeQuery();
-			if(rs.next()) {
-				board = new Exam12Board();
+		String sql = "select * from board where bno=?";
+		RowMapper<Exam12Board> rowMapper = new RowMapper<Exam12Board>() {
+			@Override
+			public Exam12Board mapRow(ResultSet rs, int rowNum) throws SQLException {
+				Exam12Board board = new Exam12Board();
 				board.setBno(rs.getInt("bno"));
 				board.setBtitle(rs.getString("btitle"));
 				board.setBcontent(rs.getString("bcontent"));
 				board.setBwriter(rs.getString("bwriter"));
-				board.setBdate(rs.getDate("bdate"));
 				board.setBpassword(rs.getString("bpassword"));
+				board.setBdate(rs.getDate("bdate"));
 				board.setBhitcount(rs.getInt("bhitcount"));
 				board.setBoriginalfilename(rs.getString("boriginalfilename"));
 				board.setBsavedfilename(rs.getString("bsavedfilename"));
 				board.setBfilecontent(rs.getString("bfilecontent"));
+				return board;
 			}
-			rs.close();
-			pstmt.close();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			//연결 끊기
-			try { 
-				conn.close(); 
-				LOGGER.info("연결 끊김");
-			} catch (SQLException e) { }
-		}		
+		};
+		Exam12Board board = jdbcTemplate.queryForObject(sql, rowMapper, bno);
 		return board;
-	}
-	
-	////////////////////////////////////////////////////////////////////////////////////////////////
-	@Override
-	public String memberInsert(Exam12Member member) {
-		String mid = null;
-		Connection conn = null;
-		try {
-			//JDBC Driver 클래스 로딩
-			Class.forName("oracle.jdbc.OracleDriver");
-			//연결 문자열 작성
-			String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-			//연결 객체 얻기
-			conn = DriverManager.getConnection(url, "iotuser", "iot12345");
-			LOGGER.info("연결 성공");
-			//매개 변수화된 SQL 작성
-			String sql = "insert into member ";
-			sql += "(mid, mname, mpassword, mdate, mtel, memail, mage, maddress, moriginalfilename, msavedfilename, mfilecontent) ";
-			sql += "values ";
-			sql += "(?, ?, ?, sysdate, ?, ?, ?, ?, ?, ?, ?) ";
-			//SQL 문을 전송해서 실행
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, member.getMid());
-			pstmt.setString(2, member.getMname());
-			pstmt.setString(3, member.getMpassword());
-			pstmt.setString(4, member.getMtel());
-			pstmt.setString(5, member.getMemail());
-			pstmt.setInt(6, member.getMage());
-			pstmt.setString(7, member.getMaddress());
-			pstmt.setString(8, member.getMoriginalfilename());
-			pstmt.setString(9, member.getMsavedfilename());
-			pstmt.setString(10, member.getMfilecontent());
-			pstmt.executeUpdate();
-			pstmt.close();
-			//리턴값 설정
-			mid = member.getMid();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			//연결 끊기
-			try { 
-				conn.close(); 
-				LOGGER.info("연결 끊김");
-			} catch (SQLException e) { }
-		}
-		return mid;
 	}
 	
 	@Override
@@ -330,6 +259,54 @@ public class Exam12DaoImpl2 implements Exam12Dao {
 			} catch (SQLException e) { }
 		}
 	}
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////
+	@Override
+	public String memberInsert(Exam12Member member) {
+		String mid = null;
+		Connection conn = null;
+		try {
+			//JDBC Driver 클래스 로딩
+			Class.forName("oracle.jdbc.OracleDriver");
+			//연결 문자열 작성
+			String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+			//연결 객체 얻기
+			conn = DriverManager.getConnection(url, "iotuser", "iot12345");
+			LOGGER.info("연결 성공");
+			//매개 변수화된 SQL 작성
+			String sql = "insert into member ";
+			sql += "(mid, mname, mpassword, mdate, mtel, memail, mage, maddress, moriginalfilename, msavedfilename, mfilecontent) ";
+			sql += "values ";
+			sql += "(?, ?, ?, sysdate, ?, ?, ?, ?, ?, ?, ?) ";
+			//SQL 문을 전송해서 실행
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, member.getMid());
+			pstmt.setString(2, member.getMname());
+			pstmt.setString(3, member.getMpassword());
+			pstmt.setString(4, member.getMtel());
+			pstmt.setString(5, member.getMemail());
+			pstmt.setInt(6, member.getMage());
+			pstmt.setString(7, member.getMaddress());
+			pstmt.setString(8, member.getMoriginalfilename());
+			pstmt.setString(9, member.getMsavedfilename());
+			pstmt.setString(10, member.getMfilecontent());
+			pstmt.executeUpdate();
+			pstmt.close();
+			//리턴값 설정
+			mid = member.getMid();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			//연결 끊기
+			try { 
+				conn.close(); 
+				LOGGER.info("연결 끊김");
+			} catch (SQLException e) { }
+		}
+		return mid;
+	}	
 	
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	public static void main(String[] args) {
