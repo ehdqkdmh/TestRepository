@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.Date;
 import java.util.List;
 
+import javax.annotation.Resource;
 import javax.servlet.ServletContext;
 
 import org.slf4j.Logger;
@@ -14,7 +15,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.mycompany.myapp.dto.Exam12Board;
 import com.mycompany.myapp.dto.Exam12Member;
@@ -24,7 +24,7 @@ import com.mycompany.myapp.service.Exam12Service;
 public class Exam12JdbcController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Exam12JdbcController.class);
 	
-	@Autowired
+	@Resource(name="exam12ServiceImpl2")
 	private Exam12Service service;
 	
 	@Autowired
