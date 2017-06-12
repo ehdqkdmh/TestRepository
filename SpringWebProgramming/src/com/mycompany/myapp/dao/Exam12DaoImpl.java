@@ -406,15 +406,6 @@ public class Exam12DaoImpl implements Exam12Dao {
 			} catch (SQLException e) { }
 		}
 	}
-	
-	////////////////////////////////////////////////////////////////////////////////////////////////
-	public static void main(String[] args) {
-		Exam12DaoImpl test = new Exam12DaoImpl();
-		List<Exam12Board> list = test.boardSelectPage(2, 10);
-		for(Exam12Board board : list) {
-			LOGGER.info(board.getBtitle());
-		}
-	}
 }
 
 
