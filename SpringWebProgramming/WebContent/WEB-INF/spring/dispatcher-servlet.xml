@@ -4,9 +4,11 @@
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 
 	<!-- @어노테이션을 이용해서 개발할 수 있도록 설정 -->
 	<mvc:annotation-driven/>
@@ -40,7 +42,10 @@
 	<!-- 생성자 주입 -->
 	<bean id="exam10Service5"  class="com.mycompany.myapp.service.Exam10Service5Impl">
 		<constructor-arg ref="exam10Dao2"/>
-	</bean>		
+	</bean>	
+	
+	<!-- AOP 어노테이션 사용 설정 -->
+	<aop:aspectj-autoproxy/>	
 </beans>
 
 
