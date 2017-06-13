@@ -12,6 +12,7 @@
 	<body>
 		aop/exam02LoginForm.jsp
 		<hr/>
+		로그인 체크 결과: ${loginNeed} <br/>
 		로그인 폼 보여주기
 	</body>
 </html>

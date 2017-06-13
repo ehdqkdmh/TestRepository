@@ -10,6 +10,8 @@
 		<script src="<%=application.getContextPath()%>/resources/bootstrap-3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 	</head>
 	<body>
-		실행시간: ${runtime}
+		aop/exam01.jsp
+		<hr/>
+		로그인 하였습니다.
 	</body>
 </html>

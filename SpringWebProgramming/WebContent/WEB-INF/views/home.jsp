@@ -109,9 +109,10 @@
 		<a href="jdbc/exam05"  class="btn btn-primary">게시물 페이지 목록</a>
 		
 		<h4>AOP</h4>
-		<a href="aop/exam01"  class="btn btn-primary">실행 시간 체크</a>
-		<a href="aop/exam02Write"  class="btn btn-primary">로그인 여부 체크1</a>
-		<a href="aop/exam02Update"  class="btn btn-primary">로그인 여부 체크2</a>
+		<a href="jdbc/exam05"  class="btn btn-primary">실행 시간 체크</a>
+		<a href="aop/exam01"  class="btn btn-primary">로그인하기</a>
+		<a href="aop/exam02Write"  class="btn btn-primary">로그인 해야 볼 수 내용1</a>
+		<a href="aop/exam02Update"  class="btn btn-primary">로그인 해야 볼 수 내용2</a>
 	</body>
 </html>
 

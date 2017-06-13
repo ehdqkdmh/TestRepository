@@ -42,9 +42,9 @@
 	<!-- 생성자 주입 -->
 	<bean id="exam10Service5"  class="com.mycompany.myapp.service.Exam10Service5Impl">
 		<constructor-arg ref="exam10Dao2"/>
-	</bean>	
+	</bean>
 	
-	<!-- AOP 어노테이션 사용 설정 -->
+	<!-- AOP -->
 	<aop:aspectj-autoproxy/>	
 </beans>
 
