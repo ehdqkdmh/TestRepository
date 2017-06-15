@@ -41,6 +41,12 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		<!-- spring-jdbc 모듈 설정 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>	
 		<!-- spring-test 모듈 설정 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -150,11 +156,6 @@
 			<version>11.2.0.4.0-atlassian-hosted</version>
 		</dependency>
 		<!-- Connection Pool -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>4.3.8.RELEASE</version>
-		</dependency>
 		<dependency>
 		    <groupId>c3p0</groupId>
 		    <artifactId>c3p0</artifactId>
