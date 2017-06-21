@@ -34,8 +34,8 @@ public class GasSensor {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		PCF8591 pcf8591 = new PCF8591(0x48, PCF8591.AIN0);
-		GasSensor test = new GasSensor(pcf8591, RaspiPin.GPIO_00);
+		PCF8591 pcf8591 = new PCF8591(0x48, PCF8591.AIN2);
+		GasSensor test = new GasSensor(pcf8591, RaspiPin.GPIO_23);
 		
 		//방법1: Digital 핀의 상태를 이용
 		test.setGpioPinListenerDigital(new GpioPinListenerDigital() {
