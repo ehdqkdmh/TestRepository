@@ -82,7 +82,7 @@ public class UltrasonicSensor {
 	
 	//Method
 	public static void main(String[] args) throws Exception {
-		UltrasonicSensor test = new UltrasonicSensor(RaspiPin.GPIO_00, RaspiPin.GPIO_01);
+		UltrasonicSensor test = new UltrasonicSensor(RaspiPin.GPIO_28, RaspiPin.GPIO_29);
 		while(true) {
 			int distance = test.getDistance();
 			System.out.println("거리(cm): " + distance);

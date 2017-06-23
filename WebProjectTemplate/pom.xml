@@ -53,7 +53,17 @@
 			<artifactId>spring-test</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-				
+		<!-- spring-websocket 모듈 설정 -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-websocket</artifactId>
+		    <version>4.3.8.RELEASE</version>
+		</dependency>			
+		<dependency>
+		    <groupId>org.apache.tomcat.embed</groupId>
+		    <artifactId>tomcat-embed-websocket</artifactId>
+		    <version>8.0.44</version>
+		</dependency>
 		<!-- AOP를 위한 AspectJ 설정 -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
