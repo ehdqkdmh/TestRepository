@@ -1,5 +1,6 @@
 package coap.exam04.server;
 
+import test.CoapResource01;
 import coap.exam02.server.*;
 import coap.exam01.server.*;
 import java.io.IOException;

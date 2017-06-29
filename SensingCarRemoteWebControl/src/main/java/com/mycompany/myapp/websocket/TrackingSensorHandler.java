@@ -39,8 +39,6 @@ public class TrackingSensorHandler extends TextWebSocketHandler implements Appli
 			public void onLoad(CoapResponse response) {
 				String json = response.getResponseText();
 				
-				logger.info(json);
-				
 				JSONObject jsonObject = new JSONObject(json);
 				String tracking = jsonObject.getString("tracking");
 				

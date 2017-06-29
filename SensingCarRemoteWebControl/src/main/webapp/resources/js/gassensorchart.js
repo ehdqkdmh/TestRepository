@@ -26,7 +26,15 @@ $(function() {
 		series: [{
 			name: "가스",
 			data: []
-		}]
+		}],
+		//마커(점)이 없어지는 현상 방지
+		plotOptions: {
+	        series: {
+	            marker: {
+	                enabled: true
+	            }
+	        }
+	    }
 	});
 });
 

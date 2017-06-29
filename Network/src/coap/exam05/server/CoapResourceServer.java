@@ -1,5 +1,6 @@
 package coap.exam05.server;
 
+import test.CoapResource01;
 import coap.exam04.server.*;
 import coap.exam02.server.*;
 import coap.exam01.server.*;

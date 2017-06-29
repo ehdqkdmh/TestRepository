@@ -26,8 +26,17 @@ $(function() {
 		series: [{
 			name: "온도",
 			data: []
-		}]
+		}],
+		//마커(점)이 없어지는 현상 방지
+		plotOptions: {
+	        series: {
+	            marker: {
+	                enabled: true
+	            }
+	        }
+	    }
 	});
+	console.log(thermistorSensorChart);
 });
 
 function requestThermistorSensorData() {

@@ -1,10 +1,13 @@
 package sensingcar.coap.server;
 
+import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.util.logging.Level;
 import org.eclipse.californium.core.CaliforniumLogger;
 import org.eclipse.californium.core.CoapServer;
+import org.eclipse.californium.core.coap.CoAP;
 import org.eclipse.californium.core.network.CoapEndpoint;
+import org.eclipse.californium.core.network.EndpointManager;
 import org.eclipse.californium.scandium.ScandiumLogger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,10 +40,11 @@ public class CoapResourceServer {
 	//Constructor
 	public CoapResourceServer() throws Exception {
 		coapServer = new CoapServer();
-		InetSocketAddress isa1 = new InetSocketAddress("192.168.3.9", 5683);
-		InetSocketAddress isa2 = new InetSocketAddress("localhost", 5683);
-		coapServer.addEndpoint(new CoapEndpoint(isa1));
-		coapServer.addEndpoint(new CoapEndpoint(isa2));
+		for(InetAddress addr : EndpointManager.getEndpointManager().getNetworkInterfaces()){
+			if(!addr.isLinkLocalAddress()){
+				coapServer.addEndpoint(new CoapEndpoint(new InetSocketAddress(addr, CoAP.DEFAULT_COAP_PORT)));
+			}
+		}
 		
 		coapServer.add(new BackTireResource());
 		coapServer.add(new FrontTireResource());
