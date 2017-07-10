@@ -23,7 +23,7 @@
 			이름: <%=name%>
 		</div>
 		<div>
-			<%Member member = new Member("홍길동", 30);%>
+			<%Exam07Member member = new Exam07Member("홍길동", 30);%>
 			이름: <%=member.getName()%> <br/>
 			나이: <%=member.getAge()%>
 		</div>
@@ -36,8 +36,8 @@
 			이름: ${name}
 		</div>
 		<div>
-			<%request.setAttribute("member", new Member("홍길동", 30));%>
-			이름: <%=((Member)request.getAttribute("member")).getName()%>
+			<%request.setAttribute("member", new Exam07Member("홍길동", 30));%>
+			이름: <%=((Exam07Member)request.getAttribute("member")).getName()%>
 			이름: ${member.name} <br/>
 			나이: ${member.age}
 		</div>
@@ -45,7 +45,7 @@
 			이름: <%=request.getAttribute("name2")%> <br/>
 			이름: ${name2} <br/>
 			
-			이름: <%=((Member)request.getAttribute("member2")).getName()%>
+			이름: <%=((Exam07Member)request.getAttribute("member2")).getName()%>
 			이름: ${member2.name} <br/>
 			나이: ${member2.age}
 		</div>		

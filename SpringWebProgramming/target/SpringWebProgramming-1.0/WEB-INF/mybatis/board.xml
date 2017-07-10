@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="board">
+	<insert id="insert" parameterType="com.mycompany.myapp.dto.Exam12Board">
+		<selectKey keyProperty="bno" resultType="int" order="AFTER">
+			select board_bno_seq.currval from dual
+		</selectKey>
+		<if test="boriginalfilename != null">
+			insert into board
+			(bno, btitle, bcontent, bwriter, bdate, bpassword, bhitcount, boriginalfilename, bsavedfilename, bfilecontent)
+			values
+			(board_bno_seq.nextval, #{btitle}, #{bcontent}, #{bwriter}, sysdate, #{bpassword}, 0, #{boriginalfilename}, #{bsavedfilename}, #{bfilecontent}) 
+		</if>
+		<if test="boriginalfilename == null">
+			insert into board
+			(bno, btitle, bcontent, bwriter, bdate, bpassword, bhitcount)
+			values
+			(board_bno_seq.nextval, #{btitle}, #{bcontent}, #{bwriter}, sysdate, #{bpassword}, 0) 
+		</if>		
+	</insert>
+	
+	<select id="selectAll" resultType="com.mycompany.myapp.dto.Exam12Board" >
+		select bno, btitle, bwriter, bdate, bhitcount  from board  order by bno desc
+	</select>	
+	<!-- 
+	<resultMap id="selectAllResultMap" type="com.mycompany.myapp.dto.Exam12Board">
+		<result column="bid" property="bno"/>
+		<result column="bowner" property="bwriter"/>
+	</resultMap>
+	
+	<select id="selectAll" resultType="com.mycompany.myapp.dto.Exam12Board" resultMap="selectAllResultMap">
+		select bno as bid, btitle, bwriter as bowner, bdate, bhitcount  from board  order by bno desc
+	</select>
+	-->
+	
+	<select id="selectByPage" 
+				parameterType="map"
+				resultType="com.mycompany.myapp.dto.Exam12Board">
+		select * 
+		from (
+			select rownum as r, bno, btitle, bwriter, bdate, bhitcount
+			from (
+				select bno, btitle, bwriter, bdate, bhitcount from board order by bno desc
+			) 
+			where rownum&lt;=#{endNum}
+		)
+		where r&gt;=#{startNum}
+	</select>
+	
+	<select id="countAll" resultType="int">
+		select count(*) from board 
+	</select>
+	
+	<select id="selectByBno" 
+		parameterType="int"
+		resultType="com.mycompany.myapp.dto.Exam12Board">
+		select * from board where bno=#{bno}
+	</select>
+	
+	<update id="updateBhitcount" parameterType="map">
+		update board set bhitcount=#{bhitcount} where bno=#{bno}
+	</update>
+	
+	<update id="update" parameterType="com.mycompany.myapp.dto.Exam12Board">
+		<if test="boriginalfilename != null">
+			update board set btitle=#{btitle}, bcontent=#{bcontent}, bpassword=#{bpassword}, bdate=sysdate, boriginalfilename=#{boriginalfilename}, bsavedfilename=#{bsavedfilename}, bfilecontent=#{bfilecontent}  where bno=#{bno}
+		</if>
+		<if test="boriginalfilename == null">
+			update board set btitle=#{btitle}, bcontent=#{bcontent}, bpassword=#{bpassword}, bdate=sysdate  where bno=#{bno}
+		</if>
+	</update>
+</mapper>
+
+
+
+
+
+
+
+
+
+

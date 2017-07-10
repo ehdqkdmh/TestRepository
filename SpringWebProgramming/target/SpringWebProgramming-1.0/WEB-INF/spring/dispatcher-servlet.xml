@@ -4,9 +4,13 @@
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:websocket="http://www.springframework.org/schema/websocket"
+	xsi:schemaLocation="http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket-4.3.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 
 	<!-- @어노테이션을 이용해서 개발할 수 있도록 설정 -->
 	<mvc:annotation-driven/>
@@ -25,6 +29,32 @@
 	
 	<bean id="multipartResolver"
 		  class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+		  
+	<bean id="exam10Dao2" class="com.mycompany.myapp.dao.Exam10Dao2Impl"/>	  
+	
+	<!-- Setter 주입 -->
+	<!-- 
+	<bean id="exam10Service4" class="com.mycompany.myapp.service.Exam10Service4Impl"
+			p:exam10Dao-ref="exam10Dao2"/> 
+	-->
+	<bean id="exam10Service4" class="com.mycompany.myapp.service.Exam10Service4Impl">
+		<property name="exam10Dao" ref="exam10Dao2"></property>
+	</bean>
+	
+	<!-- 생성자 주입 -->
+	<bean id="exam10Service5"  class="com.mycompany.myapp.service.Exam10Service5Impl">
+		<constructor-arg ref="exam10Dao2"/>
+	</bean>
+	
+	<!-- AOP -->
+	<aop:aspectj-autoproxy/>	
+	
+	<!-- WebSocket URL Mapping -->
+	<websocket:handlers>
+		<websocket:mapping handler="echoHandler" path="/websocket/echo"/>
+		<websocket:mapping handler="measureHandler" path="/websocket/measure"/>
+		<websocket:mapping handler="chatHandler" path="/websocket/chat"/>
+	</websocket:handlers>
 </beans>
 
 
